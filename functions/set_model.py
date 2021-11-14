@@ -1,4 +1,7 @@
-def model(batch_size, seq_len, vocab_size):
+from keras.models import Sequential, load_model
+from keras.layers import LSTM, Dropout, TimeDistributed, Dense, Activation, Embedding
+
+def set_model(batch_size, seq_len, vocab_size):
     model = Sequential()
     model.add(Embedding(vocab_size, 512, batch_input_shape=(batch_size, seq_len)))
     for i in range(4):

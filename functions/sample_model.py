@@ -1,3 +1,5 @@
+from keras.models import Sequential, load_model
+from keras.layers import LSTM, Dropout, TimeDistributed, Dense, Activation, Embedding
 def sample_model(vocab_size):
     model = Sequential()
     model.add(Embedding(vocab_size, 512, batch_input_shape=(1, 1)))

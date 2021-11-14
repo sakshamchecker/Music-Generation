@@ -1,3 +1,5 @@
+import numpy as np
+
 def batch_read(T, vocab_size,BATCH_SIZE, SEQ_LENGTH ):
     length = T.shape[0]; # length of the text
     batch_chars = int(length / BATCH_SIZE); # number of batches
